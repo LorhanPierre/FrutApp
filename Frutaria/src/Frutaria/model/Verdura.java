@@ -21,7 +21,15 @@ public class Verdura extends Produto {
 	
 	@Override
 	public String toString() {
-		return "Nome: " + nome + "\nPreço: " + preco + "\nQuantidade: " + quantidade + "\nTipo: " + tipo;
+		return "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" +
+				"\n  Verdura: " + nome +
+				"\n  --------------------------------------" +
+				"\n  Preço: R$" + preco +
+				"\n  --------------------------------------" +
+				"\n  Quantidade: " + quantidade + " unit." +
+				"\n  --------------------------------------" +
+				"\n  Peso: " + tipo + " Kg" +
+				"┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n";
 	}
 	
 }

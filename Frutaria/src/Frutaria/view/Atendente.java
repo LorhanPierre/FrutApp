@@ -16,18 +16,19 @@ public class Atendente {
 		System.out.println("┃ 4 - Sair FrutApp                       ┃");
 		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
 		int option = input.nextInt();
-		
+
 		return option;
 	}
 	
-	public int OpcaoCadastro() {
+	public int OpcaoTipo() {
 		
 
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-		System.out.println("┃         O que deseja cadastrar?        ┃");
+		System.out.println("┃    Qual é a opção que Você deseja?     ┃");
 		System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
 		System.out.println("┃ 1 - Fruta                              ┃");
 		System.out.println("┃ 2 - Verdura                            ┃");
+		System.out.println("┃ 0 - Voltar                             ┃");
 		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
 		int option = input.nextInt();
 		input.nextLine();
@@ -41,7 +42,7 @@ public class Atendente {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃         Digite o nome da Fruta         ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
+		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
 		String nome = input.nextLine();
 		
 		return nome;
@@ -51,7 +52,7 @@ public class Atendente {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃        Digite o preço da Fruta         ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: R$");
+		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: R$");
 		double preco = input.nextDouble();
 		
 		return preco;
@@ -62,7 +63,7 @@ public class Atendente {
 
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃      Digite a Quantidade de Frutas     ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: R$");
+		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: ");
 		int quant = input.nextInt();
 		
 		return quant;
@@ -72,7 +73,7 @@ public class Atendente {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃        Digite o peso da Fruta          ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: ");
+		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: ");
 		double peso = input.nextDouble();
 		
 		return peso;
@@ -84,7 +85,7 @@ public class Atendente {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃		Digite o nome da verdura		 ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
+		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
 		String nome = input.nextLine();
 		
 		return nome;
@@ -94,7 +95,7 @@ public class Atendente {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃		Digite o preço da Verdura	     ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: R$");
+		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: R$");
 		double preco = input.nextDouble();
 		
 		return preco;
@@ -104,7 +105,7 @@ public class Atendente {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃	 Digite a Quantidade de verdura 	 ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: R$");
+		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
 		int quant = input.nextInt();
 		
 		return quant;
@@ -114,12 +115,24 @@ public class Atendente {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃	    Digite o Tipo de verdura      	 ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n: R$");
+		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
 		String tipo = input.nextLine();
 		
 		return tipo;
 	}
+
+	public void Encerrando(){
+		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+		System.out.println("┃          Adeus, Volte Sempre           ┃");
+		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+	}
 	
-	
-	
+	public void  painelRemocao(){
+		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+		System.out.println("┃            Aba de Remoção              ┃");
+		System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
+		System.out.println("┃ - Escolha uma opção:                   ┃");
+		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+
+	}
 }
