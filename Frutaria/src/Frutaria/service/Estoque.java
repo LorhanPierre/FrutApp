@@ -18,12 +18,10 @@ public class Estoque {
 			case 1 -> {
 					switch (atendente.OpcaoTipo()) {
 
-						case 0 -> {
-							atendente.TelaInicial();
-						}
+						case 0 -> {}
 
 						case 1 -> {
-							String nomeFruta = atendente.CadastrarNomeFruta();
+							String nomeFruta = atendente.definirNomeFruta();
 							double precoFruta = atendente.CadastrarPrecoFruta();
 							int quantiaFruta = atendente.CadastrarQuantidadeFruta();
 							double pesofruta =	atendente.CadastrarPesoFruta();
@@ -33,11 +31,12 @@ public class Estoque {
 
 						case 2 -> {
 
-							String nomeVerdura = atendente.CadastrarNomeVerdura();
+							String nomeVerdura = atendente.definirNomeVerdura();
 							double precoVerdura = atendente.CadastrarPrecoVerdura();
 							int quantiaVerdura = atendente.CadastrarQuantidadeVerdura();
 							String tipoVerdura = atendente.CadastrarTipoVerdura();
 							Produto produto = new Verdura(nomeVerdura,precoVerdura,quantiaVerdura,tipoVerdura);
+							ListaProduto.add(produto);
 						}
 					}
 			}
@@ -45,9 +44,7 @@ public class Estoque {
 
 				switch (atendente.OpcaoTipo()){
 
-					case 0 -> {
-						atendente.TelaInicial();
-					}
+					case 0 -> {}
 
 					case 1 -> {
 						for(Produto produto : ListaProduto){
@@ -71,20 +68,45 @@ public class Estoque {
 
 			case 3 -> {
 				atendente.painelRemocao();
+				boolean removido = false;
 				switch (atendente.OpcaoTipo()) {
 
-					case 0 -> {
-						atendente.TelaInicial();
-					}
+					case 0 -> {}
 					case 1 -> {
-						String nomeParaExclusao = atendente.CadastrarNomeFruta();
-						for(Produto produto : ListaProduto){
-							if(produto instanceof Frutas && nomeParaExclusao == produto.getNome()){
-								ListaProduto.remove(nomeParaExclusao);
+						String nomeParaExclusao = atendente.definirNomeFruta();
+						for (Produto produto : ListaProduto){
+							for(int localProduto = 0; localProduto < ListaProduto.size(); localProduto ++){
+								if(produto instanceof Frutas && ListaProduto.get(localProduto).getNome().equalsIgnoreCase(nomeParaExclusao)){
+									ListaProduto.remove(localProduto);
+									removido = true;
+								}
+							}
+							if(removido = true){
+								atendente.RemocaoComSucesso();
+							}
+							else{
+								atendente.RemocaoItemNaoEncontrado();
+							}
+						}
+
+					}
+					case 2 -> {
+						String nomeParaExclusao = atendente.definirNomeVerdura();
+						for (Produto produto : ListaProduto){
+							for(int localProduto = 0; localProduto < ListaProduto.size(); localProduto ++){
+								if(produto instanceof Verdura && ListaProduto.get(localProduto).getNome().equalsIgnoreCase(nomeParaExclusao)){
+									ListaProduto.remove(localProduto);
+									removido = true;
+								}
+							}
+							if(removido = true){
+								atendente.RemocaoComSucesso();
+							}
+							else{
+								atendente.RemocaoItemNaoEncontrado();
 							}
 						}
 					}
-					case 2 -> {}
 				}
 			}
 

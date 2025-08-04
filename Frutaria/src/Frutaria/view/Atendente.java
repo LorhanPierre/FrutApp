@@ -35,10 +35,36 @@ public class Atendente {
 		return option;
 
 	}
-	
+
+	public void Encerrando(){
+		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+		System.out.println("┃          Adeus, Volte Sempre           ┃");
+		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+	}
+
+	public void  painelRemocao(){
+		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+		System.out.println("┃            Aba de Remoção              ┃");
+		System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
+		System.out.println("┃ - Escolha uma opção:                   ┃");
+		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+
+	}
+
+	public void RemocaoComSucesso(){
+		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+		System.out.println("┃     Produto Removido Com Sucesso       ┃");
+		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+	}
+
+	public void RemocaoItemNaoEncontrado(){
+		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+		System.out.println("┃         Produto Não Encontrado         ┃");
+		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+	}
 //metodos fruta===========================================================================================================
 	
-	public String CadastrarNomeFruta() {
+	public String definirNomeFruta() {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃         Digite o nome da Fruta         ┃");
@@ -81,7 +107,7 @@ public class Atendente {
 
 //metodos verdura===========================================================================================================
 	
-	public String CadastrarNomeVerdura() {
+	public String definirNomeVerdura() {
 		
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃		Digite o nome da verdura		 ┃");
@@ -116,23 +142,11 @@ public class Atendente {
 		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 		System.out.println("┃	    Digite o Tipo de verdura      	 ┃");
 		System.out.print("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n:");
+		input.nextLine();
 		String tipo = input.nextLine();
 		
 		return tipo;
 	}
 
-	public void Encerrando(){
-		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-		System.out.println("┃          Adeus, Volte Sempre           ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
-	}
-	
-	public void  painelRemocao(){
-		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-		System.out.println("┃            Aba de Remoção              ┃");
-		System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
-		System.out.println("┃ - Escolha uma opção:                   ┃");
-		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
 
-	}
 }
